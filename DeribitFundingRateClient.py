@@ -46,7 +46,7 @@ class DeribitFundingRateClient(FundingRateClient):
 
         total_interest = Decimal("0")
         for item in result:
-            total_interest += self._parse_decimal(item, "interest_8h")
+            total_interest += self._parse_decimal(item, "interest_1h")
 
         return float(total_interest)
 
